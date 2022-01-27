@@ -2,6 +2,7 @@
 #########################################################
 
 getwd()
+
 mbta <- read_excel("Sexual_Abuse.xlsx",sheet = "T1")
 str(mbta)
 table(mbta$Study_Group)
