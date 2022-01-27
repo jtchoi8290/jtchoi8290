@@ -143,4 +143,3 @@ str_count <- function(string, pattern = "3,4") {
          regex = stri_count_regex(string, pattern, opts_regex = opts(pattern))
   )
 }
-
