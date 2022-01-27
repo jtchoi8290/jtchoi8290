@@ -8,9 +8,13 @@ str(mbta)
 table(mbta$Study_Group)
 
 Child = mbta %>% filter (T1_Age_Group == 0)
+
 Child_victim = Child %>% filter (Study_Group == 1)
+
 Child_comp = Child %>% filter (Study_Group == 2)
+
 Child_comp = Child_comp %>% filter (T1relat_Code == 2)
+
 str(Child_comp)
 
 Adolescent = mbta %>% filter (T1_Age_Group == 1)
