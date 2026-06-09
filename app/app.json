@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "BizEmail",
+    "slug": "biz-email",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "ios": { "supportsTablet": true },
+    "android": { "adaptiveIcon": { "backgroundColor": "#ffffff" } },
+    "extra": {
+      "apiBaseUrl": "http://localhost:8787"
+    }
+  }
+}
