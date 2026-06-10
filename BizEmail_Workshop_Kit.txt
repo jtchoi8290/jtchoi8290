@@ -1,0 +1,774 @@
+================================================================================
+                    📚 BizEmail Workshop Kit
+        A 2-Hour Hands-On Workshop for Absolute Beginners
+   "Run a real AI app on your own phone — no coding required"
+================================================================================
+
+
+WHAT'S INCLUDED
+================================================================================
+1. Pre-Workshop Email (send 3 days before)
+2. Workshop Slide Deck (~23 slides, narration included)
+3. Participant Cheat Sheet (printable handout)
+4. Common Errors Self-Help Page (printable)
+5. Instructor Run-Of-Show (your minute-by-minute script)
+
+
+
+================================================================================
+PART 1 — PRE-WORKSHOP EMAIL
+================================================================================
+
+Send this 3 days before the workshop. This is the single most important piece
+of the kit — every minute of prep work the attendees do at home is a minute
+they're not stuck during the workshop.
+
+
+SUBJECT: Before our BizEmail workshop — 15 min of homework (please don't skip!)
+
+Hello!
+
+Thanks for signing up for the "Run Your First AI App" workshop on [DATE] at
+[TIME].
+
+In just 2 hours, you'll run a real AI-powered Korean/English email app on your
+own phone. You won't be writing code — you'll be installing and running an app
+that I built, so you can experience how this works end-to-end.
+
+To make sure the 2 hours go smoothly, please do the 3 small setup tasks below
+before you come. They take about 15 minutes total. If you get stuck, that's
+fine — come a bit early and I'll help.
+
+
+--------------------------------------------------------------------------------
+TASK 1 — Install Node.js on your laptop (5 min)
+--------------------------------------------------------------------------------
+
+Node.js is the engine that runs the app's code.
+
+1. Go to https://nodejs.org
+2. Click the big green "LTS" button. A file will download.
+3. Open the downloaded file → Continue → Continue → Agree → Install → enter
+   your computer password.
+4. When finished, fully close any open Terminal/Command Prompt windows.
+
+How to verify it worked:
+- Mac: Open Terminal (Cmd + Space, type "Terminal", hit Enter)
+- Windows: Open Command Prompt (Windows key, type "cmd", hit Enter)
+
+Type:
+    node -v
+
+If you see something like "v22.11.0", you're done. ✅
+
+
+--------------------------------------------------------------------------------
+TASK 2 — Install Expo Go on your phone (2 min)
+--------------------------------------------------------------------------------
+
+Expo Go is the app that will run our project on your phone.
+
+- iPhone:  https://apps.apple.com/app/expo-go/id982107779
+- Android: https://play.google.com/store/apps/details?id=host.exp.exponent
+
+That's it. Don't open it yet — we'll do that together.
+
+
+--------------------------------------------------------------------------------
+TASK 3 — Create a free Anthropic account (3 min)
+--------------------------------------------------------------------------------
+
+Anthropic makes the AI ("Claude") that writes the emails.
+
+1. Go to https://console.anthropic.com
+2. Sign up with your email (or Google account)
+3. Verify your email if asked
+4. STOP HERE. You don't need to add a credit card yet — we'll do that together
+   in the workshop, and you'll only need to add $5 of credit (which gets you
+   about 2,000 emails).
+
+
+--------------------------------------------------------------------------------
+WHAT TO BRING
+--------------------------------------------------------------------------------
+
+[ ] Your laptop with Node.js installed
+[ ] Your phone with Expo Go installed
+[ ] Your laptop's charger
+[ ] A credit card (for $5 of Anthropic credit) — optional
+[ ] Phone and laptop on the same Wi-Fi as the venue
+
+
+--------------------------------------------------------------------------------
+TROUBLE WITH SETUP?
+--------------------------------------------------------------------------------
+
+Reply to this email with a screenshot of the error and I'll help you before
+the workshop. Don't suffer in silence!
+
+See you on [DATE].
+
+— [YOUR NAME]
+
+
+
+================================================================================
+PART 2 — WORKSHOP SLIDE DECK
+================================================================================
+
+Use these as a structure. Each slide has a title, body content for the screen,
+and notes on what to say.
+
+
+--------------------------------------------------------------------------------
+SLIDE 1 — Title
+--------------------------------------------------------------------------------
+
+🚀 Run Your First AI App
+Build, deploy, and share an AI-powered Korean/English email writer — in 2 hours
+
+SAY: "By the end of today, you'll have a real AI app running on your own
+phone. You won't write any code — you'll experience the full pipeline so you
+understand what's possible."
+
+
+--------------------------------------------------------------------------------
+SLIDE 2 — Who am I?
+--------------------------------------------------------------------------------
+
+- [Your name, role]
+- 3 days ago I had never built a mobile app
+- Today I'm teaching you how
+- This is intentional — I'm one step ahead, not ten
+
+SAY: "I'm not a software engineer. I built this 3 days ago, hitting 15 errors
+along the way. If I can do it, you absolutely can."
+
+
+--------------------------------------------------------------------------------
+SLIDE 3 — Live Demo (no slide — go to your phone)
+--------------------------------------------------------------------------------
+
+DO: Open BizEmail on your phone. Type in Korean: "내일 회의 30분 늦을 것
+같다고 알리기" → tap Compose → show the polished business email that
+appears. Tap copy. Switch language to English, type "let them know the report
+is delayed", show the result.
+
+SAY: "This whole experience took about $0.002 of AI usage — basically free.
+You're going to run this same app on your phone today."
+
+
+--------------------------------------------------------------------------------
+SLIDE 4 — What you'll do today
+--------------------------------------------------------------------------------
+
+YOU WILL:
+✅ Get a working AI app running on YOUR phone (1.5 hr)
+✅ Understand what each piece is — Terminal, GitHub, AI APIs (built in)
+✅ Walk out with a working playground to keep experimenting (forever)
+
+YOU WILL NOT:
+❌ Memorize commands
+❌ Become a programmer in 2 hours
+❌ Build the app from scratch
+
+SAY: "Today is about confidence. You're going to feel: 'I can do this kind of
+thing.' That feeling is worth more than any single skill."
+
+
+--------------------------------------------------------------------------------
+SLIDE 5 — The 4 strange new words
+--------------------------------------------------------------------------------
+
+| Word     | What it really means                                     |
+|----------|----------------------------------------------------------|
+| Terminal | A text-only way to talk to your computer. Looks scary,   |
+|          | isn't.                                                   |
+| GitHub   | Like Google Drive, but for code. Free.                   |
+| API Key  | A password that lets your app talk to AI. Costs a tiny   |
+|          | amount per use.                                          |
+| Expo Go  | A free app on your phone that runs developer projects.   |
+
+SAY: "Don't memorize these — just notice when I mention them. They'll feel
+familiar by the end."
+
+
+--------------------------------------------------------------------------------
+SLIDE 6 — The architecture (1 slide of "theory")
+--------------------------------------------------------------------------------
+
+         📱 Your Phone (Expo Go)
+                ↓
+         My Mac (does the AI work)
+                ↓
+         Anthropic (Claude AI)
+                ↓
+         Email comes back
+
+SAY: "Your phone is the steering wheel. My Mac is the engine. Anthropic is
+the gas. Today you connect them all."
+
+
+--------------------------------------------------------------------------------
+SLIDE 7 — Activity 1: Check Node.js
+--------------------------------------------------------------------------------
+
+On your laptop, open Terminal/Command Prompt and type:
+
+    node -v
+
+If you see "v22.x.x" or similar → ✅ raise your hand to confirm
+If you see "command not found"  → 🚨 raise your hand for help
+
+SAY: "Don't worry about understanding what Node is yet. We just need to know
+it's there."
+
+
+--------------------------------------------------------------------------------
+SLIDE 8 — Activity 2: Download the project
+--------------------------------------------------------------------------------
+
+    git clone https://github.com/jtchoi8290/jtchoi8290.git
+    cd jtchoi8290
+
+Type exactly that into Terminal. Hit Enter after each line.
+
+SAY: "You just downloaded my entire app from the internet. The 'cd' command
+moves you INTO that folder, like opening a folder in Finder."
+
+
+--------------------------------------------------------------------------------
+SLIDE 9 — Activity 3: Get your API key
+--------------------------------------------------------------------------------
+
+1. Go to https://console.anthropic.com
+2. Sign in
+3. Left sidebar → API Keys → Create Key
+4. Name it "workshop"
+5. COPY THE KEY NOW — it starts with sk-ant-...
+6. Paste it somewhere safe (a Note app)
+
+⚠️ You will never see this key again after closing the dialog.
+
+SAY: "Treat this key like a password. Never put it in a screenshot or share
+it. If you ever leak it, you can revoke it from this same page."
+
+
+--------------------------------------------------------------------------------
+SLIDE 10 — Activity 4: Add credit ($5)
+--------------------------------------------------------------------------------
+
+1. Same page → Plans & Billing
+2. Click Add Credits
+3. Enter card → Add $5 (this is enough for ~2,000 emails)
+
+SAY: "This is the only cost today. $5 will last you weeks of personal use."
+
+
+--------------------------------------------------------------------------------
+SLIDE 11 — Activity 5: Save your API key into the project
+--------------------------------------------------------------------------------
+
+In Terminal, run:
+
+    cd ~/jtchoi8290/server
+    cp .env.example .env
+    open -e .env       (Mac) — or "notepad .env" (Windows)
+
+A text editor opens. Replace the line:
+
+    ANTHROPIC_API_KEY=sk-ant-...
+
+With your real key. Save and close.
+
+SAY: "This file .env holds your secret. It's never uploaded to GitHub — that's
+the whole point of keeping secrets in a separate file."
+
+
+--------------------------------------------------------------------------------
+SLIDE 12 — Activity 6: Start the backend
+--------------------------------------------------------------------------------
+
+In the same Terminal:
+
+    npm install
+
+Wait for it to finish (~2 min). Then:
+
+    npm run dev
+
+You should see: biz-email-server listening on :8787 ✅
+
+LEAVE THIS TERMINAL OPEN. DON'T TYPE IN IT.
+
+SAY: "This terminal is now the brain of your app. If you close it, the brain
+dies."
+
+
+--------------------------------------------------------------------------------
+SLIDE 13 — ☕ BREAK (10 min)
+--------------------------------------------------------------------------------
+
+Stretch! Drink water. If anyone is stuck, raise your hand now.
+
+
+--------------------------------------------------------------------------------
+SLIDE 14 — Activity 7: Open a SECOND terminal
+--------------------------------------------------------------------------------
+
+Mac:     In Terminal menu → Shell → New Window (or Cmd+N)
+Windows: Open a second Command Prompt
+
+In the new window:
+
+    cd ~/jtchoi8290/app
+    npm install
+
+Wait ~3 min for it to finish.
+
+
+--------------------------------------------------------------------------------
+SLIDE 15 — Activity 8: Find your computer's network address
+--------------------------------------------------------------------------------
+
+Mac:     In Terminal type: ipconfig getifaddr en0
+Windows: Type "ipconfig" → look for "IPv4 Address"
+
+You'll see something like 192.168.0.42. WRITE THIS DOWN.
+
+
+--------------------------------------------------------------------------------
+SLIDE 16 — Activity 9: Tell the app about your computer
+--------------------------------------------------------------------------------
+
+    open -e ~/jtchoi8290/app/app.json     (Mac)
+    notepad ~/jtchoi8290/app/app.json     (Windows)
+
+Find the line:
+
+    "apiBaseUrl": "http://10.0.121.245:8787"
+
+Replace "10.0.121.245" with YOUR computer's address from Slide 15. Save and
+close.
+
+SAY: "This tells the app on your phone: 'Send your requests to MY laptop,
+here.'"
+
+
+--------------------------------------------------------------------------------
+SLIDE 17 — Activity 10: Start the app
+--------------------------------------------------------------------------------
+
+In the second terminal:
+
+    npm start
+
+A big QR code appears. ✅
+
+
+--------------------------------------------------------------------------------
+SLIDE 18 — Activity 11: Scan with your phone
+--------------------------------------------------------------------------------
+
+iPhone:  Open the Camera app → point at QR → tap the banner that appears
+Android: Open Expo Go → tap "Scan QR code"
+
+Your phone is now downloading the app. First time takes ~30 sec.
+
+SAY: "Your phone and your laptop must be on the same Wi-Fi for this part."
+
+
+--------------------------------------------------------------------------------
+SLIDE 19 — 🎉 You did it
+--------------------------------------------------------------------------------
+
+BizEmail is now running on your phone.
+
+Try it:
+1. Select Korean or English
+2. Pick a tone and recipient
+3. Type one casual sentence
+4. Tap "Compose Email"
+5. Watch AI write a polished business email in 5 seconds
+
+
+--------------------------------------------------------------------------------
+SLIDE 20 — What just happened?
+--------------------------------------------------------------------------------
+
+You just deployed a full-stack AI application:
+
+✅ A mobile app (React Native)
+✅ A backend server (Node.js)
+✅ An AI integration (Anthropic API)
+✅ A secret-management system (.env)
+✅ Version-controlled source code (Git/GitHub)
+
+That's the same architecture used by Slack, Notion, ChatGPT mobile, and most
+modern apps.
+
+
+--------------------------------------------------------------------------------
+SLIDE 21 — Your next 7 days
+--------------------------------------------------------------------------------
+
+If you want to keep going:
+
+1. Read the README.md in ~/jtchoi8290
+2. Change a button color in app/src/screens/ComposeScreen.tsx
+3. Use Claude Code — go to https://claude.ai/code, paste in:
+   "Help me change BizEmail to also include a 'casual' tone option"
+
+Claude Code is the AI assistant that helped me build this. It will guide you
+the same way through any change you want to make.
+
+
+--------------------------------------------------------------------------------
+SLIDE 22 — The honest truth
+--------------------------------------------------------------------------------
+
+"I hit 15 errors building this. The skill that mattered wasn't writing code —
+it was reading errors carefully and not giving up."
+
+You have:
+- Working Node.js ✅
+- A real app on your phone ✅
+- An AI API key ✅
+- A patient AI tutor (Claude Code) ✅
+
+You have everything you need to keep going. The hard part — getting started —
+is done.
+
+
+--------------------------------------------------------------------------------
+SLIDE 23 — Questions + 1-on-1 help (15 min reserved)
+--------------------------------------------------------------------------------
+
+Ask anything. Show me your screen. Don't leave confused.
+
+
+
+================================================================================
+PART 3 — PARTICIPANT CHEAT SHEET
+================================================================================
+
+Print this double-sided. Hand out at start of workshop.
+
+
+--------------------------------------------------------------------------------
+🎯 BizEmail Workshop Cheat Sheet
+--------------------------------------------------------------------------------
+
+EVERY COMMAND YOU'LL TYPE TODAY
+
+    # 1. Check Node.js is installed
+    node -v
+
+    # 2. Download the project
+    git clone https://github.com/jtchoi8290/jtchoi8290.git
+    cd jtchoi8290
+
+    # 3. Set up the backend (Terminal 1)
+    cd ~/jtchoi8290/server
+    cp .env.example .env
+    open -e .env                  # paste your API key, save, close
+    npm install                   # ~2 min
+    npm run dev                   # leave running!
+
+    # 4. In a NEW terminal (Terminal 2)
+    cd ~/jtchoi8290/app
+    npm install                   # ~3 min
+
+    # 5. Find your computer's IP
+    ipconfig getifaddr en0        # Mac
+    ipconfig                      # Windows, look for IPv4
+
+    # 6. Edit app.json with your IP
+    open -e ~/jtchoi8290/app/app.json
+
+    # 7. Start the app
+    npm start                     # QR code appears
+
+ON YOUR PHONE
+- iPhone: Camera app → scan QR → tap banner
+- Android: Expo Go → Scan QR code
+
+IF SOMETHING GOES WRONG
+
+| Problem                       | Try this                                  |
+|-------------------------------|-------------------------------------------|
+| Command says "not found"      | Did you install Node.js? Restart Terminal.|
+| Phone says "couldn't connect" | Same Wi-Fi? Check app.json has YOUR IP.   |
+| Phone shows white screen      | In Term 2, Ctrl+C then npx expo start     |
+|                               | --clear                                   |
+| API error                     | Check .env has your real key              |
+| Anything else                 | 🙋 Raise your hand                        |
+
+CRITICAL REMINDERS
+✅ TWO terminals must run simultaneously (backend + app)
+✅ Don't close either one until you're done
+✅ Phone and laptop must be on the same Wi-Fi
+⚠️ Your API key is a secret — never screenshot it, never share it
+
+AFTER THE WORKSHOP
+- The app you ran: in ~/jtchoi8290 on your laptop
+- To run it again later: just repeat steps 3 (Terminal 1) and 4 + 7 (Terminal 2)
+- To modify it with AI help: https://claude.ai/code
+- Documentation: README.md in the project folder
+
+
+
+================================================================================
+PART 4 — COMMON ERRORS SELF-HELP PAGE
+================================================================================
+
+Print and place at every desk. Lets attendees fix common issues without
+raising their hand for every little thing.
+
+
+--------------------------------------------------------------------------------
+🆘 BizEmail Workshop — Common Errors
+--------------------------------------------------------------------------------
+
+▸ "command not found: npm" or "command not found: node"
+  Cause: Node.js wasn't installed, or Terminal hasn't picked it up.
+  Fix:
+  1. Verify install at https://nodejs.org (LTS version)
+  2. Quit Terminal completely (Cmd+Q on Mac, close window on Windows)
+  3. Reopen Terminal → try "node -v" again
+  4. If still missing: tell instructor
+
+--------------------------------------------------------------------------------
+
+▸ "command not found: git"
+  Cause: Git is missing from your Mac.
+  Fix (Mac):     In Terminal type "xcode-select --install" → click Install
+                 when prompted. Wait 5 min. Retry.
+  Fix (Windows): Install from https://git-scm.com/download/win
+
+--------------------------------------------------------------------------------
+
+▸ "cd: no such file or directory: ~/jtchoi8290/server"
+  Cause: You're not in the right place.
+  Fix:
+      cd ~
+      ls
+  Do you see "jtchoi8290"? If not, you didn't clone yet — go back to Slide 8.
+
+--------------------------------------------------------------------------------
+
+▸ EMFILE: too many open files (Mac only)
+  Cause: macOS file-watcher limit.
+  Fix: In Terminal type:
+      brew install watchman
+  Then retry "npm start". If "brew" is also missing: tell instructor.
+
+--------------------------------------------------------------------------------
+
+▸ Phone says: "Project incompatible with this version of Expo Go"
+  Cause: Expo Go updated; the project needs adjustment.
+  Fix: Tell the instructor — this is a 1-min fix from the instructor's machine.
+
+--------------------------------------------------------------------------------
+
+▸ Phone says: "Could not connect to development server"
+  Cause: Phone and laptop are not on the same Wi-Fi, or wrong IP in app.json.
+  Fix:
+  1. Confirm both devices are on the venue's main Wi-Fi (not "guest")
+  2. Re-run "ipconfig getifaddr en0" (Mac) or "ipconfig" (Windows)
+  3. Update app.json with the correct IP
+  4. In Terminal 2 press Ctrl+C, then "npx expo start --clear"
+  5. Re-scan QR
+
+--------------------------------------------------------------------------------
+
+▸ App opens but Compose Email fails with "401" or "authentication"
+  Cause: Your API key isn't loaded.
+  Fix:
+      cat ~/jtchoi8290/server/.env
+  Does it show your real key starting "sk-ant-api03-..."? If not, edit it.
+  Then in Terminal 1: Ctrl+C → "npm run dev" (restarts the backend).
+
+--------------------------------------------------------------------------------
+
+▸ App says "Your credit balance is too low"
+  Cause: Anthropic account has no money.
+  Fix: https://console.anthropic.com → Plans & Billing → Add $5.
+
+--------------------------------------------------------------------------------
+
+▸ White screen on phone forever
+  Cause: Cache corruption.
+  Fix: In Terminal 2: Ctrl+C → "npx expo start --clear". Scan QR again.
+
+--------------------------------------------------------------------------------
+
+▸ "I just want to start over"
+  Close both terminals. Reopen Terminal. Then:
+      cd ~/jtchoi8290/server
+      npm run dev
+  In a SECOND terminal:
+      cd ~/jtchoi8290/app
+      npm start
+
+--------------------------------------------------------------------------------
+
+▸ Still stuck after trying the above?
+  🙋 Raise your hand. That's why the instructor is here. Don't suffer in
+  silence — you're not slowing anyone down.
+
+
+
+================================================================================
+PART 5 — INSTRUCTOR RUN-OF-SHOW
+================================================================================
+
+Your minute-by-minute internal script. DON'T SHARE WITH ATTENDEES.
+
+
+--------------------------------------------------------------------------------
+2-Hour Workshop Schedule
+--------------------------------------------------------------------------------
+
+🕐 BEFORE PARTICIPANTS ARRIVE (30 min)
+[ ] Test your own demo end-to-end. Make sure BizEmail works on YOUR phone.
+[ ] Open all 3 terminals in advance, ready to show
+[ ] Project Slide 1 on screen
+[ ] Print: cheat sheets + error guides for every attendee
+[ ] Test the venue Wi-Fi from your phone
+[ ] Have a printed list of expected attendees + columns:
+    "Node ✅, Expo Go ✅, Anthropic ✅" — check off as you go to track who's behind
+
+
+🕐 0:00 – 0:10 — Welcome & Demo
+- Greet, hand out cheat sheets
+- Skip introductions — get to the demo fast
+- Run the live BizEmail demo on your phone
+- Goal: build excitement before any laptops open
+
+
+🕐 0:10 – 0:25 — Vocabulary + architecture
+- Walk through slides 4–6
+- Don't lecture — make it feel like a story
+- Take 1–2 questions, no more
+
+
+🕐 0:25 – 0:35 — Activity 1: Verify Node.js
+- Everyone types "node -v"
+- Walk the room. Note who has issues. Help them.
+- Don't move on until 90% of room has the green check
+- For the missing 10%: pair them with a partner who's working
+
+
+🕐 0:35 – 0:50 — Activities 2–5: Clone repo, API key, .env
+- This is where attendees diverge the most
+- Slow down. Walk the room every 2 min.
+- Critical: confirm everyone copied their API key before they navigate away
+  from the page
+
+
+🕐 0:50 – 1:00 — Backend starts (Activity 6)
+- "npm install" will run for 2 min — fill the time with:
+  "While that's installing, who has a question?"
+- Confirm everyone sees "listening on :8787" before break
+
+
+🕐 1:00 – 1:10 — ☕ BREAK
+- USE THIS TIME for 1-on-1 help with the slow ones
+- Don't socialize. Triage.
+
+
+🕐 1:10 – 1:40 — App setup + run (Activities 7–10)
+- Find IP — confusing for many. Walk people through it.
+- Editing app.json is where typos kill — emphasize "no quotes inside the URL"
+- When "npm start" shows QR — pause. Wait for everyone.
+
+
+🕐 1:40 – 1:55 — Scan + first email
+- Help attendees scan
+- When their first Compose works — make them say "I did it" out loud.
+  It cements the moment.
+- For those still stuck — pair them with someone who succeeded; let the
+  successful one explain
+
+
+🕐 1:55 – 2:00 — Close
+- Slide 22: "the honest truth"
+- Slide 23: questions, offer 15 min after for stragglers
+
+
+--------------------------------------------------------------------------------
+💡 INSTRUCTOR SURVIVAL TIPS
+--------------------------------------------------------------------------------
+
+| Situation                          | Response                              |
+|------------------------------------|---------------------------------------|
+| Someone is far behind              | Pair with successful attendee.        |
+|                                    | Don't slow whole room.                |
+| Wi-Fi flaky                        | Have a phone hotspot ready as backup. |
+| Multiple people stuck on same thing| Stop the room, address it on screen.  |
+| Loud question that breaks flow     | "Great question — let's hold it for   |
+|                                    | the Q&A at the end."                  |
+| Someone asks "what if I want X"    | "Excellent — that's exactly what      |
+|                                    | Claude Code is for."                  |
+| Someone wants to skip ahead        | Let them. Hand them a printed README. |
+| Total tech failure (laptop dies)   | Have BizEmail running on phone as     |
+|                                    | fallback demo.                        |
+
+
+--------------------------------------------------------------------------------
+⚠️ THE 3 THINGS MOST LIKELY TO FAIL
+--------------------------------------------------------------------------------
+
+1. "npm install" hangs on weak Wi-Fi → tell people to be patient,
+   5 min is normal
+2. "app.json" IP typos → walk the room, eyeball every screen
+3. Anthropic account creation rate-limit if many sign up on same network →
+   pre-emptively send the email signup 3 days before so this happens before
+   the workshop
+
+
+--------------------------------------------------------------------------------
+🎯 SUCCESS CRITERIA FOR THE WORKSHOP
+--------------------------------------------------------------------------------
+
+- MINIMUM: 50% of attendees have the app on their phone by 2:00
+- GOOD:    75% running, 25% one step away
+- GREAT:   90%+ running, everyone has at least one successful Compose
+
+If you hit Minimum, the workshop succeeded. Beginners walking out with the
+app running on their phone is a transformative experience. Don't beat
+yourself up if a quarter are stuck — they'll get there at home.
+
+
+
+================================================================================
+FINAL CHECKLIST FOR YOU
+================================================================================
+
+Before workshop day:
+
+[ ] Send pre-workshop email 3 days ahead
+[ ] Send a reminder email 1 day ahead
+[ ] Print cheat sheets (1 per person + 5 extra)
+[ ] Print error guides (1 per person)
+[ ] Charge laptop fully
+[ ] Test BizEmail demo right before walking in
+[ ] Have a phone hotspot as Wi-Fi backup
+[ ] Bring 2–3 USB-C cables (people forget chargers)
+[ ] Open Claude Code (https://claude.ai/code) in a tab as live emergency
+    helper
+
+
+================================================================================
+
+You've got this. The fact that you, as a beginner, are about to teach this
+is your superpower — you remember exactly where the friction is. Senior
+engineers don't.
+
+Good luck — and have your phone ready to record the moment someone in your
+audience yells "It works!" for the first time. That's the magic. 🎉
+
+================================================================================
+                              END OF DOCUMENT
+================================================================================
